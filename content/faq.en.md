@@ -3,7 +3,7 @@ title: Frequently asked questions
 ---
 
 ### I'm a beginner, what's the best keyboard for me to start with?
-We recommend starting with 60% layout: K:03, HPD, Planeta.
+We recommend starting with 60% layout: K:03, HPD.
 
 ### You have different switches and keycaps to choose from, which is the best one for me to choose?
 The most common option is Brown switches (tactile) and XDA keycaps.

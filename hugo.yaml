@@ -186,5 +186,5 @@ params:
 
   editURL:
     enable: true
-    base: "https://github.com/ergohaven/docs"
+    base: "https://github.com/ergohaven/docs/edit/main/content"
 
