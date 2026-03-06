@@ -20,7 +20,7 @@ On the trackball and touchpad modules, you can adjust cursor movement sensitivit
 
 
 {{% details title="Changing DPI in Vial" closed="true" %}}
-  1. Open Vial.
+  1. Download and open the Ergohaven fork of [Vial](https://ru.ergohaven.xyz/vial).
   2. In the top menu, go to the Layouts tab.
   3. Select the desired DPI value from the dropdown next to DPI.
 
@@ -52,7 +52,7 @@ In this tab you can also configure:
 ## Firmware update
 ### Preparation
 - Download the latest firmware version [here](http://github.com/ergohaven/keymap_hub).
-- Save your layout in Vial: open the "File" menu, then click "Save current layout".
+- Save your layout in Vial: open the **"File"** menu, then click **"Save current layout"**.
 
 ### Installation
 **Left half:** 
