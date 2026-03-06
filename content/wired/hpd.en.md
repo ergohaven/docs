@@ -4,7 +4,7 @@ sidebar:
   exclude: true
 ---
 
-![image](/images/layouts/hpd_ru.png)  
+![image](/images/layouts/HPD2_en.png)  
 
 ## Connection
 - The High Plains Drifter keyboard works with devices running Windows, macOS, Linux, Android, and iOS.
