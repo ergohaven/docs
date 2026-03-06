@@ -4,7 +4,7 @@ sidebar:
   exclude: true
 ---
 
-![image](/images/layouts/hpd_ru.png)  
+![image](/images/layouts/hpd2_ru.png)  
 
 ## Подключение
 - Клавиатура High Plains Drifter работает с устройствами под управлением Windows, macOS, Linux, Android, iOS
