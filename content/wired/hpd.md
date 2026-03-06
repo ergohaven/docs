@@ -4,7 +4,7 @@ sidebar:
   exclude: true
 ---
 
-![image](/images/layouts/hpd2_ru.png)  
+![image](/images/layouts/HPD2_ru.png)  
 
 ## Подключение
 - Клавиатура High Plains Drifter работает с устройствами под управлением Windows, macOS, Linux, Android, iOS
@@ -21,7 +21,7 @@ sidebar:
 
 
 {{% details title="Изменение DPI в Vial" closed="true" %}}
-  1. Откройте Vial
+  1. Скачайте и откройте форк [Vial](https://ru.ergohaven.xyz/vial) от Ergohaven
   2. В верхнем меню перейдите во вкладку Layouts
   3. Выберите нужное значение DPI в раскрывающемся списке напротив пункта DPI
 
@@ -53,7 +53,7 @@ sidebar:
 ## Обновление прошивки
 ### Подготовка
 - Скачайте последнюю версию прошивки [здесь](http://github.com/ergohaven/keymap_hub) 
-- Сохраните Вашу раскладку в программе Vial, нажав на меню "File", дальше "Save current layout"
+- Сохраните Вашу раскладку в программе Vial, нажав на меню **"File"**, дальше **"Save current layout"**
 
 ### Установка
 **Левая половинка:** 
