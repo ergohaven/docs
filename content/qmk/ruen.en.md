@@ -198,7 +198,7 @@ For the RuEn mode, the key here is that when using this program:
 
 ### CAPS WORD mode
 
-The CAPS WORD mode (activated by pressing the left and right shift keys simultaneously) allows you to enter one word in upper case and automatically exit this mode by pressing the character separating the words. In RuEn mode, CAPS WORD mode is supported: characters that are word separators in the English layout (such as `ZHEKHYOBYU`) do not interrupt CAPS WORD mode if typed in the Russian layout.
+The CAPS WORD mode (activated by the dedicated CAPS WORD key) allows you to enter one word in upper case and automatically exit this mode by pressing the character separating the words. In RuEn mode, CAPS WORD mode is supported: characters that are word separators in the English layout (such as `ZHEKHYOBYU`) do not interrupt CAPS WORD mode if typed in the Russian layout.
 
 ### RuEn word mode
 
