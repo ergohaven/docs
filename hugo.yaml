@@ -62,7 +62,7 @@ languages:
         - identifier: shop
           name: Магазин
           weight: 5
-          url: "https://ru.ergohaven.xyz/shop"
+          url: "https://eh.works/shop"
 
         - name: Search
           weight: 6
@@ -131,7 +131,7 @@ languages:
         - identifier: shop
           name: Shop
           weight: 5
-          url: "https://ergohaven.xyz/shop"
+          url: "https://eh.industries/shop"
 
         - name: Search
           weight: 6
