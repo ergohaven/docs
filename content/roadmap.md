@@ -11,7 +11,8 @@ layout: landing
 - [ ] New switches                                              
 - [ ] Planeta v3                                                                               
 - [ ] Project "freemove"                                          
-- [ ] Project "Sprawl"                                          
+- [ ] Project "Sprawl"
+- [ ] Products for left-handed people                                       
 
 ## 2025
 
