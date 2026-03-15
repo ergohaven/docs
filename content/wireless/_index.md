@@ -13,5 +13,6 @@ sidebar:
   {{< card link="imperial44-we" title="Imperial44 Wireless Edition" >}}
   {{< card link="qube" title="Qube" >}}
   {{< card link="tb-mini" title="Trackball Mini" >}}
+  {{< card link="tb-royale" title="Trackball Royale" >}}
   {{< card link="velvet-ui" title="Velvet Wireless Edition" >}}
 {{< /cards >}}
