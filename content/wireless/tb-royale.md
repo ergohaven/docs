@@ -150,7 +150,7 @@ sniper {
 
 ### Подготовка к прошивке
 
-Скачайте актуальные файлы прошивок *settings_reset* и *Trackball Royal* с [keymap_hub](https://github.com/ergohaven/keymap_hub)
+Скачайте актуальные файлы прошивок *settings_reset* и *Trackball Royale* с [keymap_hub](https://github.com/ergohaven/keymap_hub)
 
 ### Прошивка для сброса настроек
 
