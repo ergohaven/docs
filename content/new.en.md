@@ -176,8 +176,8 @@ flowchart TD;
     First[Is this your first split?] -- Yes --> Q3
     First -- No --> Second
 
-    Second(Do you want a 40% or 60% layout?) -- 40% --> Q4(Do you want a tented case?)
-    Second -- 60% --> Q3(Do you want a tented case?)
+    Second(Do you want a 40% or 60% layout?) -- 40% --> Q4(Do you want a curved case?)
+    Second -- 60% --> Q3(Do you want a curved case?)
 
     Q3 -- No --> K03[K:03]
     Q3 -- Yes --> HPD[High Plains Drifter]
