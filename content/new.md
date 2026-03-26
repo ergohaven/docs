@@ -174,10 +174,10 @@ title: С чего начать?
 flowchart TD;
 
     First[Это Ваш первый сплит?] -- Да --> Q3
-    First[Это Ваш первый сплит?] -- Нет --> Second
+    First -- Нет --> Second
 
     Second(Хотите 40% или 60% раскладку?) -- 40% --> Q4(Хотите изогнутый вариант?)
-    Second(Хотите 40% или 60% раскладку?) -- 60% --> Q3(Хотите изогнутый вариант?)
+    Second -- 60% --> Q3(Хотите изогнутый вариант?)
 
     Q3 -- Нет --> K03[K:03]
     Q3 -- Да --> HPD[High Plains Drifter]
@@ -185,8 +185,8 @@ flowchart TD;
     Q4 -- Нет --> I44[Imperial44]
     Q4 -- Да --> V[Velvet]
 
-    I44[Imperial44]  --> Q5(Ещё меньше клавиш?) 
-    Q5(Ещё меньше клавиш?) -- Да --> OP36(Omega Point 36) 
+    I44 --> Q5(Ещё меньше клавиш?)
+    Q5 -- Да --> OP36(Omega Point 36)
 
     click K03 "https://eh.works/k03" _blank
     click HPD "https://eh.works/hpd" _blank
