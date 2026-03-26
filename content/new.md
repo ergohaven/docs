@@ -187,6 +187,12 @@ flowchart TD;
 
     I44[Imperial44]  --> Q5(Ещё меньше клавиш?) 
     Q5(Ещё меньше клавиш?) -- Да --> OP36(Omega Point 36) 
+
+    click K03 "https://eh.works/k03" _blank
+    click HPD "https://eh.works/hpd" _blank
+    click I44 "https://eh.works/imperial44" _blank
+    click V "https://eh.works/velvet" _blank
+    click OP36 "https://eh.works/op36" _blank
 ```
 
 ---
