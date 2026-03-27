@@ -40,9 +40,55 @@ title: Решение частых проблем
 
 {{% /steps %}}
 
-{{< details title="Залипание или несрабатывание отдельных клавиш" closed="true" >}}
+## Софтовые проблемы
 
-Поменяйте местами свитчи с дефектного места и исправного, тем самым вы исключите сам свитч. Если после смены свитча проблема сохраняется, а сам свитч исправен на другом месте, то необходима диагностика самой платы устройства. 
+## Неполадки по моделям
+
+{{< details title="Imperial44" closed="true" >}}
+
+{{< /details >}}
+
+{{< details title="Imperial44 – Wireless Edition" closed="true" >}}
+
+{{< /details >}}
+
+{{< details title="K:03" closed="true" >}}
+
+{{< /details >}}
+
+{{< details title="K:03 – Wireless Edition" closed="true" >}}
+
+{{< /details >}}
+
+{{< details title="Velvet" closed="true" >}}
+
+{{< /details >}}
+
+{{< details title="Velvet v3 – Wireless and UI Edition" closed="true" >}}
+
+{{< /details >}}
+
+{{< details title="Space Mission 30" closed="true" >}}
+
+{{< /details >}}
+
+{{< details title="High Plains Drifter v2" closed="true" >}}
+
+{{< /details >}}
+
+{{< details title="Macropad" closed="true" >}}
+
+{{< /details >}}
+
+{{< details title="Qube" closed="true" >}}
+
+{{< /details >}}
+
+{{< details title="Trackball Mini" closed="true" >}}
+
+{{< /details >}}
+
+{{< details title="Trackball Royale" closed="true" >}}
 
 {{< /details >}}
 
