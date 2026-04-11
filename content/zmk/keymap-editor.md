@@ -65,7 +65,7 @@ Keymap-editor является веб-приложением, он доступ�
 ![image](/images/keymap-editor/firmware.png)
 
 
-После скачивания архива `firmware` прошиваем файлами из него клавиатуру по шагам, описанным в <a href="https://journey.ergohaven.xyz/pages/docs/zmk-keyboards#прошивка-клавиатуры" target="_blank">первых шагах с клавиатурой на ZMK</a> (см. раздел «Прошивка клавиатуры»).
+После скачивания архива `firmware` прошиваем файлами из него клавиатуру по шагам, описанным в <a href="https://docs.ergohaven.xyz/en/zmk/zmk-keyboards/#прошивка-клавиатуры" target="_blank">первых шагах с клавиатурой на ZMK</a> (см. раздел «Прошивка клавиатуры»).
 
 Изменения в раскладку внесены!
 

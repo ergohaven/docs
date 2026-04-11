@@ -55,7 +55,7 @@ The opened page displays the statuses of all build stages. After all stages are 
 
 ![image](/images/keymap-editor/firmware.png)
 
-After downloading the `firmware` archive, flash the keyboard with the files from it, following the steps described in the <a href="https://journey.ergohaven.xyz/en-gb/pages/docs/zmk-keyboards#keyboard-firmware" target="_blank">First steps with a Keyboard on ZMK</a> (see the "Keyboard firmware" section).
+After downloading the `firmware` archive, flash the keyboard with the files from it, following the steps described in the <a href="https://docs.ergohaven.xyz/en/zmk/zmk-keyboards/#keyboard-firmware" target="_blank">First steps with a Keyboard on ZMK</a> (see the "Keyboard firmware" section).
 
 Changes to the layout have been made!
 
