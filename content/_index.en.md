@@ -22,7 +22,7 @@ toc: false
 {{< cards >}}
   {{< card link="wired" title="Wired devices" icon="wired" >}}
   {{< card link="wireless" title="Wireless devices" icon="wireless" >}}
-  {{< card link="qmk" title="Soft for wireled devices" icon="qmk" >}}
+  {{< card link="qmk" title="Soft for wired devices" icon="qmk" >}}
   {{< card link="zmk" title="Soft for wireless devices" icon="zmk" >}}
   {{< card link="troubleshooting" title="Troubleshooting" icon="tools" >}}
   {{< card link="accessories" title="Accessories" icon="accessories" >}}
