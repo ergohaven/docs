@@ -20,8 +20,7 @@ toc: false
 <div class="hx:mt-6"></div>
 
 {{< cards >}}
-  {{< card link="device" title="Keyboards and other devices" icon="device" >}}
-  {{< card link="accessories" title="Accessories" icon="accessories" >}}
+  {{< card link="device" title="Devices & Accessories" icon="device" >}}
   {{< card link="software" title="Software" icon="soft" >}}
   {{< card link="troubleshooting" title="Troubleshooting" icon="tools" >}}
   {{< card link="firmware" title="Firmware" icon="firmware" >}}

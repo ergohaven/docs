@@ -1,5 +1,7 @@
 ---
-title: Keyboards and other devices
+title: "Devices & Accessories"
+aliases:
+  - /accessories/
 toc: false
 ---
 
@@ -10,5 +12,6 @@ toc: false
   {{< card link="sm30" title="Space Mission 30" >}}
   {{< card link="tb-mini" title="Trackball Mini" >}}
   {{< card link="tb-royale" title="Trackball Royale" >}}
+  {{< card link="sculpt" title="Sculpt" >}}
   {{< card link="archive" title="Previous releases" >}}
 {{< /cards >}}

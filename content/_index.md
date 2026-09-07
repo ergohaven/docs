@@ -22,8 +22,7 @@ toc: false
 <div class="hx:mt-6"></div>
 
 {{< cards >}}
-  {{< card link="device" title="Клавиатуры и другие девайсы" icon="device" >}}
-  {{< card link="accessories" title="Аксессуары" icon="accessories" >}}
+  {{< card link="device" title="Устройства и аксессуары" icon="device" >}}
   {{< card link="software" title="Софт" icon="soft" >}}
   {{< card link="troubleshooting" title="Устранение неполадок" icon="tools" >}}
   {{< card link="firmware" title="Прошивки" icon="firmware" >}}

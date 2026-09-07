@@ -1,5 +1,7 @@
 ---
 title: "Sculpt"
+aliases:
+  - /accessories/sculpt/
 sidebar:
   exclude: true
 ---
