@@ -56,3 +56,20 @@ After setting all RGB parameters, click "Save" in the bottom-right corner of Via
 
 Firmware files and update instructions are available [here](https://docs.eh.industries/firmware/)
 
+## Care and maintenance
+
+- Periodically clean the case from dust and dirt with a dry or slightly damp cloth
+
+{{< callout type="error" >}}
+  Do not use aggressive cleaning agents (acetone, gasoline, solvents (646, white spirit), concentrated acids, or alkalis)!
+{{< /callout >}}
+
+{{< callout type="warning" >}}
+  Do not allow liquid to enter the device!
+{{< /callout >}}
+
+## Support
+
+The keypad comes with a *3-year warranty and service support*.
+
+If you have any questions about setup, firmware, or operation, please contact [the Ergohaven Telegram group](https://t.me/c/1464748383/8323) or [knowledge base](https://docs.eh.industries/)
