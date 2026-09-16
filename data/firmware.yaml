@@ -134,68 +134,68 @@ groups:
         picker_order: 12
         files:
           - label: { ru: Прошивка, en: Firmware }
-            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.5/4.0.5_phenom_v1.uf2
+            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_phenom_v1.uf2
       - id: qmk-phenom-mini
         name: Phenom Mini
         picker_order: 15
         files:
           - label: { ru: Прошивка, en: Firmware }
-            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.5/4.0.5_phenom_mini_v1.uf2
+            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_phenom_mini_v1.uf2
       - id: qmk-phenom-micro
         name: Phenom Micro
         picker_order: 18
         files:
           - label: { ru: Прошивка, en: Firmware }
-            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.5/4.0.5_phenom_micro_v1.uf2
+            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_phenom_micro_v1.uf2
       - id: qmk-k03-v3-v4
         name: "K:03 v3/v4"
         picker_order: 22
         files:
           - label: { ru: Прошивка, en: Firmware }
-            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.5/4.0.5_k03_v3_v4.uf2
+            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_k03_v3_v4.uf2
       - id: qmk-k03-pro-v2-v3
         name: "K:03 PRO v2/v3"
         picker_order: 23
         files:
           - label: { ru: Прошивка, en: Firmware }
-            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.5/4.0.5_k03pro_v2_v3.uf2
+            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_k03pro_v2_v3.uf2
       - id: qmk-imperial44-v3-v4
         name: Imperial44 v3/v4
         picker_order: 26
         files:
           - label: { ru: Прошивка, en: Firmware }
-            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.5/4.0.5_imperial44_v3_v4.uf2
+            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_imperial44_v3_v4.uf2
       - id: qmk-hpd-v2
         name: HPD v2
         picker_order: 29
         files:
           - label: { ru: Без модулей, en: No modules }
-            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.5/4.0.5_hpd_v2.uf2
+            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_hpd_v2.uf2
           - label: { ru: Энкодер/трекбол, en: Encoder/trackball }
-            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.5/4.0.5_hpd_v2_enc_ball.uf2
+            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_hpd_v2_enc_ball.uf2
           - label: { ru: Энкодер/тачпад, en: Encoder/touchpad }
-            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.5/4.0.5_hpd_v2_enc_touch.uf2
+            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_hpd_v2_enc_touch.uf2
           - label: { ru: Энкодер/джойстик, en: Encoder/joystick }
-            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.5/4.0.5_hpd_v2_enc_joy.uf2
+            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_hpd_v2_enc_joy.uf2
       - id: qmk-velvet-v3
         name: Velvet v3
         picker_order: 32
         files:
           - label: { ru: Прошивка, en: Firmware }
-            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.5/4.0.5_velvet_v3.uf2
+            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_velvet_v3.uf2
       - id: qmk-macropad-v3
         name: M4CR0Pad v3
         picker_order: 34
         picker_break_before: true
         files:
           - label: { ru: Прошивка, en: Firmware }
-            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.5/4.0.5_macropad_v3.uf2
+            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_macropad_v3.uf2
       - id: qmk-sm30
         name: SM30
         picker_order: 35
         files:
           - label: { ru: Прошивка, en: Firmware }
-            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.5/4.0.5_sm30_v1.uf2
+            url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_sm30_v1.uf2
 
   - id: zmk-previous
     name:
