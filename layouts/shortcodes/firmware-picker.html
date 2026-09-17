@@ -128,7 +128,8 @@
           <p class="firmware-picker__device-name">{{ $deviceName }}</p>
           <div class="firmware-picker__downloads">
             {{- range .files }}
-              <a class="firmware-picker__download" href="{{ .url }}" target="_blank" rel="noopener">
+              {{- $managedReleaseURL := or (strings.HasPrefix .url "https://github.com/ergohaven/vial-qmk/releases/download/") (strings.HasPrefix .url "https://github.com/ergohaven/rmk/releases/download/") -}}
+              <a class="firmware-picker__download" href="{{ .url }}" target="_blank" rel="noopener"{{ if $managedReleaseURL }} data-firmware-release-link data-firmware-release-state="fallback"{{ end }}>
                 <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 3v12"></path>
                   <path d="m7 10 5 5 5-5"></path>
@@ -327,3 +328,6 @@
     update();
   })();
 </script>
+{{- with resources.Get "js/firmware-release-links.js" | minify | fingerprint }}
+  <script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}"></script>
+{{- end }}
