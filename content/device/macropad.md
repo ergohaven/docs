@@ -1,5 +1,6 @@
 ---
 title: "Macropad"
+layout_lightbox: true
 sidebar:
   exclude: true
 ---
@@ -42,26 +43,15 @@ sidebar:
 
 ## Настройка макропада
 
-Для настройки M4CR0Pad v3 используйте [Entropy](https://entropy.tools/ru/). Подключите макропад к компьютеру по USB и запустите приложение
+Для настройки Macropad используйте [Entropy](https://entropy.tools/ru/). Подключите макропад к компьютеру по USB и запустите приложение
 
 Entropy записывает изменения в устройство автоматически — отдельная кнопка сохранения не нужна
-
-{{% details title="Выбор M4CR0Pad v3 в Entropy" closed="true" %}}
-
-На стартовом экране выберите **M4CR0Pad v3 (USB)**
-
-![Выбор M4CR0Pad v3 в Entropy](/images/macropad/macropad_v3_entropy_device_selection_ru.png)
-
-- **M4CR0Pad v3 (USB)** — макропад, подключённый к компьютеру по USB
-- **Список устройств** — все совместимые устройства, которые Entropy обнаружила в данный момент
-
-{{% /details %}}
 
 {{% details title="Настройка клавиш и слоёв" closed="true" %}}
 
 Перейдите во вкладку **Раскладка** и нажмите клавишу, назначение которой нужно изменить
 
-![Пикер клавиш M4CR0Pad v3](/images/macropad/macropad_v3_entropy_key_picker_ru.png)
+{{< layout-lightbox src="/images/macropad/macropad_v3_entropy_key_picker_ru.png" alt="Пикер клавиш M4CR0Pad v3" width="720" >}}
 
 - **Базовые**, **Символы**, **Моды**, **Спец**, **RGB** и **Кастом** — категории доступных действий
 - **QWERTY** — схема виртуальной клавиатуры в пикере; она не меняет раскладку операционной системы
@@ -69,7 +59,7 @@ Entropy записывает изменения в устройство авто
 
 Чтобы перейти на другой слой, используйте стрелки возле его названия
 
-![Переключение слоёв M4CR0Pad v3](/images/macropad/macropad_v3_entropy_layer_switch_ru.png)
+{{< layout-lightbox src="/images/macropad/macropad_v3_entropy_layer_switch_ru.png" alt="Переключение слоёв M4CR0Pad v3" width="720" >}}
 
 - **Номер и название слоя** — текущий редактируемый слой
 - **Стрелки влево и вправо** — переход на предыдущий или следующий слой
@@ -77,7 +67,7 @@ Entropy записывает изменения в устройство авто
 
 Чтобы переименовать слой, нажмите его название и введите до 12 символов. Клавиша **Enter** или клик вне поля сохраняет имя, **Esc** отменяет изменение
 
-![Переименование слоя M4CR0Pad v3](/images/macropad/macropad_v3_entropy_layer_name_ru.png)
+{{< layout-lightbox src="/images/macropad/macropad_v3_entropy_layer_name_ru.png" alt="Переименование слоя M4CR0Pad v3" width="720" >}}
 
 {{% /details %}}
 
@@ -85,13 +75,13 @@ Entropy записывает изменения в устройство авто
 
 Перейдите во вкладку **Настройки** → **Энкодеры** и включите **Энкодер 1**
 
-![Отображение энкодера M4CR0Pad v3](/images/macropad/macropad_v3_entropy_encoder_visibility_ru.png)
+{{< layout-lightbox src="/images/macropad/macropad_v3_entropy_encoder_visibility_ru.png" alt="Отображение энкодера M4CR0Pad v3" width="720" >}}
 
 - **Энкодер 1** — показывает или скрывает зоны энкодера на схеме раскладки; переключатель не отключает физический энкодер и не удаляет его назначения
 
 Вернитесь во вкладку **Раскладка** и нажмите нужную зону энкодера
 
-![Назначения энкодера M4CR0Pad v3](/images/macropad/macropad_v3_entropy_encoder_layout_ru.png)
+{{< layout-lightbox src="/images/macropad/macropad_v3_entropy_encoder_layout_ru.png" alt="Назначения энкодера M4CR0Pad v3" width="720" >}}
 
 - **Верхняя зона** — действие при повороте энкодера по часовой стрелке
 - **Центральная зона** — действие при нажатии на энкодер
@@ -105,7 +95,7 @@ Entropy записывает изменения в устройство авто
 
 Перейдите во вкладку **Настройки** → **RGB**
 
-![Настройка RGB-подсветки M4CR0Pad v3](/images/macropad/macropad_v3_entropy_rgb_ru.png)
+{{< layout-lightbox src="/images/macropad/macropad_v3_entropy_rgb_ru.png" alt="Настройка RGB-подсветки M4CR0Pad v3" width="720" >}}
 
 - **Включить** — включает или выключает RGB-подсветку
 - **Эффект** — выбирает статичный режим или анимацию
@@ -121,7 +111,7 @@ Entropy записывает изменения в устройство авто
 
 Перейдите во вкладку **Настройки** → **Подсветка слоёв**
 
-![Таймаут подсветки M4CR0Pad v3](/images/macropad/macropad_v3_entropy_layer_led_timeout_ru.png)
+{{< layout-lightbox src="/images/macropad/macropad_v3_entropy_layer_led_timeout_ru.png" alt="Таймаут подсветки M4CR0Pad v3" width="720" >}}
 
 - **Таймаут подсветки** — время бездействия, после которого подсветка выключается; нулевое значение отключает таймаут
 
@@ -131,7 +121,7 @@ Entropy записывает изменения в устройство авто
 
 Перейдите во вкладку **Настройки** → **Дисплей** → **Основной экран**
 
-![Основной экран дисплея M4CR0Pad v3](/images/macropad/macropad_v3_entropy_display_main_ru.png)
+{{< layout-lightbox src="/images/macropad/macropad_v3_entropy_display_main_ru.png" alt="Основной экран дисплея M4CR0Pad v3" width="720" >}}
 
 - **Цвет интерфейса** — цвет подписей, рамок клавиш и пиктограмм основного экрана
 - **Цвет фона** — цвет фона основного экрана
@@ -144,7 +134,7 @@ Entropy записывает изменения в устройство авто
 
 Перейдите во вкладку **Настройки** → **Дисплей** → **Экран ожидания**
 
-![Верхняя часть настроек экрана ожидания M4CR0Pad v3](/images/macropad/macropad_v3_entropy_display_standby_top_ru.png)
+{{< layout-lightbox src="/images/macropad/macropad_v3_entropy_display_standby_top_ru.png" alt="Верхняя часть настроек экрана ожидания M4CR0Pad v3" width="720" >}}
 
 - **Слой и язык** — показывает название текущего слоя и язык ввода операционной системы
 - **Часы** — показывает время, полученное от Entropy
@@ -158,7 +148,7 @@ Entropy записывает изменения в устройство авто
 
 Прокрутите список вниз, чтобы открыть остальные параметры
 
-![Нижняя часть настроек экрана ожидания M4CR0Pad v3](/images/macropad/macropad_v3_entropy_display_standby_bottom_ru.png)
+{{< layout-lightbox src="/images/macropad/macropad_v3_entropy_display_standby_bottom_ru.png" alt="Нижняя часть настроек экрана ожидания M4CR0Pad v3" width="720" >}}
 
 - **Цвет фона ожидания** — цвет под изображением и в его прозрачных областях
 - **Размер часов** — размер цифр часов без изменения размера остальных подписей
@@ -175,7 +165,7 @@ Entropy записывает изменения в устройство авто
 
 Перейдите во вкладку **Настройки** → **Дисплей** → **Пиктограммы**
 
-![Редактор пиктограмм M4CR0Pad v3](/images/macropad/macropad_v3_entropy_pictograms_editor_ru.png)
+{{< layout-lightbox src="/images/macropad/macropad_v3_entropy_pictograms_editor_ru.png" alt="Редактор пиктограмм M4CR0Pad v3" width="720" >}}
 
 - **Выберите тип действия** — выбирает **Макросы** или **Tap Dance**
 - **Выберите макрос** или **Выберите Tap Dance** — выбирает слот, для которого назначается пиктограмма
@@ -191,7 +181,7 @@ Entropy записывает изменения в устройство авто
 
 Кнопка **Выбрать** используется для назначения другой встроенной или сохранённой пиктограммы
 
-![Библиотека пиктограмм M4CR0Pad v3](/images/macropad/macropad_v3_entropy_pictograms_library_ru.png)
+{{< layout-lightbox src="/images/macropad/macropad_v3_entropy_pictograms_library_ru.png" alt="Библиотека пиктограмм M4CR0Pad v3" width="720" >}}
 
 - **Поиск пиктограмм** — фильтрует встроенные и сохранённые пиктограммы по названию
 - **Без пиктограммы** — удаляет назначение у выбранного макроса или Tap Dance
@@ -203,7 +193,7 @@ Entropy записывает изменения в устройство авто
 
 Перейдите во вкладку **Настройки** → **Live-интеграции**
 
-![Live-интеграции M4CR0Pad v3](/images/macropad/macropad_v3_entropy_live_features_ru.png)
+{{< layout-lightbox src="/images/macropad/macropad_v3_entropy_live_features_ru.png" alt="Live-интеграции M4CR0Pad v3" width="720" >}}
 
 - **Entropy в фоне** — показывает, требуется ли приложению продолжать работу для передачи live-данных
 - **Синхронизация раскладки** — передаёт в прошивку активный язык ввода операционной системы; переключатель включает или выключает функцию
