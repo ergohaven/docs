@@ -14,6 +14,7 @@ layout: landing
 - [x] Phenom Mini
 - [x] Phenom Micro
 - [x] K:04 Series tenting (Project "Angled")
+- [x] HPD Classic
 - [ ] Project "Ortho"
 - [ ] Space Mission 62
 - [ ] Project "Customize"
