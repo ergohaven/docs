@@ -15,7 +15,8 @@ function findPages(dir) {
 const pages = findPages(root).filter(file => fs.readFileSync(file, 'utf8').includes('data-firmware-picker'));
 assert.equal(pages.length, 2, 'Both RU and EN picker pages must be rendered');
 function element(attributes = '', text = '') {
-  const attrs = Object.fromEntries([...attributes.matchAll(/([\w-]+)="([^"]*)"/g)].map(m => [m[1], m[2]]));
+  // Hugo minification can omit quotes and collapse empty attribute values
+  const attrs = Object.fromEntries([...attributes.matchAll(/([\w-]+)(?:=(?:"([^"]*)"|'([^']*)'|([^\s>]+)))?/g)].map(m => [m[1], m[2] ?? m[3] ?? m[4] ?? '']));
   return {
     dataset: Object.fromEntries(Object.entries(attrs).filter(([key]) => key.startsWith('data-')).map(([key, value]) => [key.slice(5).replace(/-([a-z])/g, (_, c) => c.toUpperCase()), value])),
     hidden: /\bhidden\b/.test(attributes), value: '', textContent: text, id: attrs.id,
@@ -30,7 +31,9 @@ for (const page of pages) {
   const devices = [...html.matchAll(/<section\b([^>]*data-firmware-device=[^>]*)>([\s\S]*?)<\/section>/g)].map(m => element(m[1], m[2]));
   const select = html.match(/<select\b([^>]*data-firmware-type\b[^>]*)>([\s\S]*?)<\/select>/);
   assert.ok(select, 'Secondary firmware selector must exist');
-  assert.match(select[2], /<option value="">(?:Choose firmware type|Выберите тип прошивки)<\/option>/);
+  const placeholder = select[2].match(/<option\b([^>]*)>(Choose firmware type|Выберите тип прошивки)<\/option>/);
+  assert.ok(placeholder, 'Localized firmware type placeholder must exist');
+  assert.match(placeholder[1], /\bvalue(?:=""|='')?(?=\s|$)/, 'Placeholder must have an empty value');
   assert.match(html, /(?:Firmware type|Тип прошивки)<\/label>/);
   const type = element(select[1]);
   const field = element('hidden');
