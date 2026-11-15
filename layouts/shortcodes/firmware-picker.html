@@ -17,7 +17,13 @@
     {{- with .picker_order -}}
       {{- $pickerOrder = . -}}
     {{- end -}}
-    {{- $pickerOptions = $pickerOptions | append (dict "device" . "group_name" $pickerGroupName "order" $pickerOrder) -}}
+    {{- if not .picker_hidden -}}
+      {{- $optionGroupName := $pickerGroupName -}}
+      {{- if .firmware_type -}}
+        {{- $optionGroupName = cond (eq $lang "en") "QMK / RMK — wired devices" "QMK / RMK — проводные устройства" -}}
+      {{- end -}}
+      {{- $pickerOptions = $pickerOptions | append (dict "device" . "group_name" $optionGroupName "order" $pickerOrder) -}}
+    {{- end -}}
     {{- $pickerSequence = add $pickerSequence 1 -}}
   {{- end -}}
 {{- end -}}
@@ -61,7 +67,8 @@
           role="option"
           aria-selected="false"
           data-firmware-option
-          data-firmware-value="{{ $device.id }}"
+          data-firmware-value="{{ $device.picker_id | default $device.id }}"
+          data-firmware-types="{{ if $device.firmware_type }}QMK RMK{{ end }}"
           data-firmware-name="{{ $deviceName }}"
           data-firmware-search-names="{{ $searchNames }}"
         >
@@ -73,6 +80,18 @@
       </div>
     </div>
     <p class="firmware-picker__hint">{{ $hint }}</p>
+  </div>
+
+  <div class="firmware-picker__field" data-firmware-type-field hidden>
+    <label class="firmware-picker__label" for="{{ $pickerID }}-type">{{ cond (eq $lang "en") "Firmware type" "Тип прошивки" }}</label>
+    <div class="firmware-picker__control">
+      <select class="firmware-picker__search" id="{{ $pickerID }}-type" data-firmware-type>
+        <option value="">{{ cond (eq $lang "en") "Choose firmware type" "Выберите тип прошивки" }}</option>
+        <option value="QMK">QMK</option>
+        <option value="RMK">RMK</option>
+      </select>
+      <i class="firmware-picker__chevron" aria-hidden="true"></i>
+    </div>
   </div>
 
   <div class="firmware-picker__result" data-firmware-result aria-live="polite" hidden>
@@ -122,8 +141,12 @@
         {{- else if in $qmkSplitOldIDs $deviceID -}}
           {{- $instructionKey = "qmk_split_old" -}}
         {{- end -}}
+        {{- with .instruction -}}
+          {{- $instructionKey = . -}}
+        {{- end -}}
+        {{- $firmwareModel := .firmware_model | default "" -}}
         {{- $instruction := index site.Data.firmware_instructions $instructionKey -}}
-        <section class="firmware-picker__device" data-firmware-device="{{ .id }}" hidden>
+        <section class="firmware-picker__device" data-firmware-device="{{ .picker_id | default .id }}" data-firmware-variant="{{ .firmware_type | default "" }}" hidden>
           <p class="firmware-picker__group">{{ $groupName }}</p>
           <p class="firmware-picker__device-name">{{ $deviceName }}</p>
           <div class="firmware-picker__downloads">
@@ -146,7 +169,7 @@
               <ol class="firmware-picker__instruction-steps">
                 {{- range $stepIndex, $step := .steps }}
                   <li>
-                    {{- $step | safeHTML -}}
+                    {{- replace $step "{model}" $firmwareModel | safeHTML -}}
                     {{- range $instructionContent.step_notes }}
                       {{- if eq .after_step (add $stepIndex 1) }}
                         <aside class="firmware-picker__instruction-note" role="note">
@@ -191,6 +214,8 @@
     const empty = picker.querySelector("[data-firmware-empty]");
     const result = picker.querySelector("[data-firmware-result]");
     const devices = picker.querySelectorAll("[data-firmware-device]");
+    const typeField = picker.querySelector("[data-firmware-type-field]");
+    const firmwareType = picker.querySelector("[data-firmware-type]");
     let matches = options;
     let activeIndex = -1;
     let selectedValue = "";
@@ -223,10 +248,14 @@
       .replace(/(.)\1+/g, "$1");
 
     const update = () => {
+      const selectedOption = options.find((option) => option.dataset.firmwareValue === selectedValue);
+      const needsType = Boolean(selectedOption?.dataset.firmwareTypes);
+      typeField.hidden = !needsType;
       let hasSelection = false;
 
       devices.forEach((device) => {
-        const isSelected = device.dataset.firmwareDevice === selectedValue;
+        const isSelected = device.dataset.firmwareDevice === selectedValue
+          && (!needsType || device.dataset.firmwareVariant === firmwareType.value);
         device.hidden = !isSelected;
         hasSelection ||= isSelected;
       });
@@ -280,6 +309,7 @@
     };
 
     const selectOption = (option) => {
+      if (selectedValue !== option.dataset.firmwareValue) firmwareType.value = "";
       selectedValue = option.dataset.firmwareValue;
       search.value = option.dataset.firmwareName;
       update();
@@ -291,10 +321,12 @@
       option.addEventListener("click", () => selectOption(option));
     });
 
+    firmwareType.addEventListener("change", update);
     search.addEventListener("focus", filterOptions);
     search.addEventListener("blur", () => window.setTimeout(closeOptions, 0));
     search.addEventListener("input", () => {
       selectedValue = "";
+      firmwareType.value = "";
       update();
       filterOptions();
     });

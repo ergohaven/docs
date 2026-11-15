@@ -94,6 +94,48 @@ rmk_single:
       - "Import the saved layout after the update"
     note: "If a copy or disk ejection error appears while copying the firmware, simply ignore the message"
 
+phenom_qmk:
+  ru:
+    title: Как установить QMK
+    steps:
+      - 'При необходимости сохраните текущую раскладку в <a href="https://entropy.tools/ru/" target="_blank" rel="noopener">Entropy</a>'
+      - "Скачайте UF2-файл для вашей модели — один и тот же UF2 используется для обеих половинок"
+      - "Отключите USB-C от левой половинки, зажмите кнопку <code>BOOT</code> на нижней стороне корпуса и подключите её по USB-C. Отпустите кнопку, когда появится диск <code>RPI-RP2</code>"
+      - "Скопируйте скачанный UF2-файл на этот диск — половинка перезагрузится"
+      - "Повторите действия для правой половинки с тем же UF2-файлом"
+    note: "При смене типа прошивки сохраните резервную копию раскладки, но не рассчитывайте на прямой перенос настроек между QMK и RMK"
+  en:
+    title: How to install QMK
+    steps:
+      - 'Save the current layout in <a href="https://entropy.tools" target="_blank" rel="noopener">Entropy</a> if needed'
+      - "Download the UF2 file for your model — the same UF2 is used for both halves"
+      - "Disconnect USB-C from the left half, hold the <code>BOOT</code> button on the bottom of the case and connect it via USB-C. Release the button when the <code>RPI-RP2</code> drive appears"
+      - "Copy the downloaded UF2 file to that drive — the half will restart"
+      - "Repeat these steps for the right half with the same UF2 file"
+    note: "Back up your layout before changing firmware type, but do not assume settings can be transferred directly between QMK and RMK"
+
+phenom_rmk:
+  ru:
+    title: Как установить RMK
+    steps:
+      - 'Обновите <a href="https://entropy.tools/ru/" target="_blank" rel="noopener">Entropy</a> до версии 0.6.0 или новее. Если вы уже используете RMK, сохраните текущую раскладку перед обновлением'
+      - "Скачайте архив для вашей модели и распакуйте его — для половинок используются разные UF2-файлы"
+      - "Отключите USB-C от левой половинки, зажмите кнопку <code>BOOT</code> на нижней стороне корпуса и подключите её по USB-C. Отпустите кнопку, когда появится диск <code>RPI-RP2</code>"
+      - "Скопируйте <code>{model}_left.uf2</code> на этот диск — левая половинка перезагрузится"
+      - "Повторите действия для правой половинки, используя <code>{model}_right.uf2</code>"
+      - "Настройте клавиатуру в Entropy через Rynk"
+    note: "При смене типа прошивки сохраните резервную копию раскладки, но не рассчитывайте на прямой перенос настроек между QMK и RMK"
+  en:
+    title: How to install RMK
+    steps:
+      - 'Update <a href="https://entropy.tools" target="_blank" rel="noopener">Entropy</a> to version 0.6.0 or later. If you already use RMK, save the current layout before updating'
+      - "Download and extract the archive for your model — the halves use different UF2 files"
+      - "Disconnect USB-C from the left half, hold the <code>BOOT</code> button on the bottom of the case and connect it via USB-C. Release the button when the <code>RPI-RP2</code> drive appears"
+      - "Copy <code>{model}_left.uf2</code> to that drive — the left half will restart"
+      - "Repeat these steps for the right half using <code>{model}_right.uf2</code>"
+      - "Configure the keyboard in Entropy via Rynk"
+    note: "Back up your layout before changing firmware type, but do not assume settings can be transferred directly between QMK and RMK"
+
 qmk_split_new:
   ru:
     title: Как обновить прошивку

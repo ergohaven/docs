@@ -132,20 +132,29 @@ groups:
       - id: qmk-phenom
         name: Phenom
         picker_order: 12
+        picker_id: phenom
+        firmware_type: QMK
+        instruction: phenom_qmk
         files:
-          - label: { ru: Скачать, en: Firmware }
+          - label: { ru: Скачать, en: Download }
             url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_phenom_v1.uf2
       - id: qmk-phenom-mini
         name: Phenom Mini
         picker_order: 15
+        picker_id: phenom-mini
+        firmware_type: QMK
+        instruction: phenom_qmk
         files:
-          - label: { ru: Скачать, en: Firmware }
+          - label: { ru: Скачать, en: Download }
             url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_phenom_mini_v1.uf2
       - id: qmk-phenom-micro
         name: Phenom Micro
         picker_order: 18
+        picker_id: phenom-micro
+        firmware_type: QMK
+        instruction: phenom_qmk
         files:
-          - label: { ru: Скачать, en: Firmware }
+          - label: { ru: Скачать, en: Download }
             url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_phenom_micro_v1.uf2
       - id: qmk-k03-v3-v4
         name: "K:03 v3/v4"
@@ -196,6 +205,42 @@ groups:
         files:
           - label: { ru: Скачать, en: Firmware }
             url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_sm30_v1.uf2
+
+  - id: phenom-rmk
+    name:
+      ru: RMK — проводные устройства
+      en: RMK — wired devices
+    devices:
+      - id: rmk-phenom
+        name: Phenom
+        picker_id: phenom
+        picker_hidden: true
+        firmware_type: RMK
+        firmware_model: phenom
+        instruction: phenom_rmk
+        files:
+          - label: { ru: Скачать, en: Download }
+            url: https://github.com/ergohaven/rmk/releases/download/v0.3.0/phenom-v0.3.0.zip
+      - id: rmk-phenom-mini
+        name: Phenom Mini
+        picker_id: phenom-mini
+        picker_hidden: true
+        firmware_type: RMK
+        firmware_model: phenom_mini
+        instruction: phenom_rmk
+        files:
+          - label: { ru: Скачать, en: Download }
+            url: https://github.com/ergohaven/rmk/releases/download/v0.3.0/phenom-mini-v0.3.0.zip
+      - id: rmk-phenom-micro
+        name: Phenom Micro
+        picker_id: phenom-micro
+        picker_hidden: true
+        firmware_type: RMK
+        firmware_model: phenom_micro
+        instruction: phenom_rmk
+        files:
+          - label: { ru: Скачать, en: Download }
+            url: https://github.com/ergohaven/rmk/releases/download/v0.3.0/phenom-micro-v0.3.0.zip
 
   - id: zmk-previous
     name:
