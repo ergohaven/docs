@@ -201,7 +201,7 @@ groups:
             url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_macropad_v3.uf2
       - id: qmk-sm62
         name: SM62
-        picker_order: 33
+        picker_order: 19
         instruction: qmk_split_new
         files:
           - label: { ru: Скачать, en: Download }
