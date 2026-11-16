@@ -82,6 +82,12 @@ for (const page of pages) {
     assert.equal(visible[0].dataset.firmwareDevice, option.dataset.firmwareValue);
     assert.match(visible[0].textContent, /firmware-picker__instruction/);
   }
+  choose('qmk-sm62');
+  assert.equal(field.hidden, true, 'SM62 is QMK-only');
+  const sm62 = devices.find(d => !d.hidden);
+  assert.equal(sm62.dataset.firmwareDevice, 'qmk-sm62');
+  assert.ok(sm62.textContent.includes('4.2.0_sm62_v1.uf2'));
+  assert.match(sm62.textContent, /other half|второй половинки/);
   choose('rmk-k04');
   assert.equal(field.hidden, true);
   assert.equal(devices.filter(d => !d.hidden).length, 1);

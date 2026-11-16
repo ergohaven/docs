@@ -199,6 +199,13 @@ groups:
         files:
           - label: { ru: Скачать, en: Firmware }
             url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_macropad_v3.uf2
+      - id: qmk-sm62
+        name: SM62
+        picker_order: 33
+        instruction: qmk_split_new
+        files:
+          - label: { ru: Скачать, en: Download }
+            url: https://github.com/ergohaven/vial-qmk/releases/download/4.2.0/4.2.0_sm62_v1.uf2
       - id: qmk-sm30
         name: SM30
         picker_order: 35
