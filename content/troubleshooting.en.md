@@ -47,12 +47,28 @@ Reinstall the USB or Bluetooth driver on your device (PC, laptop, etc.).
 
 The issue may be related to the switch or the hot-swap socket. To identify the cause:
 
-1. **Remove the switch** from the problematic position using a switch puller.
-2. **Inspect the switch pins** — make sure they are not bent or broken.
-3. **Inspect the socket** — check for bent contact leaves inside.
-4. **Insert a known-working switch** into the problematic position:
-   - Problem is gone → the original switch is faulty, replace it.
-   - Problem persists → the socket is faulty, contact support.
+{{% steps %}}
+
+### Remove the switch
+
+**Remove the switch** from the problematic position using a switch puller
+
+### Inspect the switch pins
+
+**Inspect the switch pins** — make sure they are not bent or broken
+
+### Inspect the socket
+
+**Inspect the socket** — check for bent contact leaves inside
+
+### Test with a working switch
+
+**Insert a known-working switch** into the problematic position:
+- Problem is gone → the original switch is faulty, replace it
+- Problem persists → the socket is faulty, contact support
+
+{{% /steps %}}
+
 
 {{< callout type="warning" >}}
 Never insert a switch with a bent pin — it may damage the socket.
@@ -64,10 +80,26 @@ Never insert a switch with a bent pin — it may damage the socket.
 
 If a group of adjacent keys is not working, the issue is most likely with a row or column in the matrix.
 
-1. Make sure all switches in that area are fully seated in their sockets.
-2. Check whether any debris or liquid has gotten under the PCB.
-3. Reset to factory settings and test again.
-4. If the issue persists — contact support for PCB diagnostics.
+{{% steps %}}
+
+### Check switch seating
+
+Make sure all switches in that area are fully seated in their sockets
+
+### Inspect the PCB
+
+Check whether any debris or liquid has gotten under the PCB
+
+### Reset the settings
+
+Reset to factory settings and test again
+
+### Contact support
+
+If the issue persists — contact support for PCB diagnostics
+
+{{% /steps %}}
+
 
 {{< /details >}}
 
@@ -172,12 +204,34 @@ If pairing in one operating system breaks the connection in the other, transfer 
 
 In Windows, this feature is called **"Enhance pointer precision"**. To disable it:
 
-1. Open **Settings** (press `Win + I`).
-2. Go to **Bluetooth & devices** → **Mouse**.
-3. On the right side, click **Additional mouse settings**.
-4. In the "Mouse Properties" window, go to the **Pointer Options** tab.
-5. Under **Motion**, uncheck **"Enhance pointer precision"**.
-6. Click **Apply**, then **OK**.
+{{% steps %}}
+
+### Open Settings
+
+Open **Settings** (press `Win + I`)
+
+### Open mouse settings
+
+Go to **Bluetooth & devices** → **Mouse**
+
+### Open additional settings
+
+On the right side, click **Additional mouse settings**
+
+### Select Pointer Options
+
+In the "Mouse Properties" window, go to the **Pointer Options** tab
+
+### Disable enhanced precision
+
+Under **Motion**, uncheck **"Enhance pointer precision"**
+
+### Save the changes
+
+Click **Apply**, then **OK**
+
+{{% /steps %}}
+
 
 > **Note:** Changes take effect immediately. You can also adjust the **Pointer speed** slider here if needed.
 
@@ -187,34 +241,76 @@ In Windows, this feature is called **"Enhance pointer precision"**. To disable i
 The method depends on your macOS version.
 
 ### For macOS Sonoma and later:
-1. Open the Apple menu () → **System Settings**.
-2. In the sidebar, select **Mouse**.
-3. Click the **Advanced** button.
-4. Toggle **Pointer acceleration** to **Off**.
+{{% steps %}}
+
+### Open System Settings
+
+Open the Apple menu () → **System Settings**
+
+### Select Mouse
+
+In the sidebar, select **Mouse**
+
+### Open advanced settings
+
+Click the **Advanced** button
+
+### Disable acceleration
+
+Toggle **Pointer acceleration** to **Off**
+
+{{% /steps %}}
+
 
 ### For older versions of macOS:
-1. Open **Terminal** (Finder: `Applications` → `Utilities`).
-2. Enter the following command:
-   ```bash
-   defaults write .GlobalPreferences com.apple.mouse.scaling -1
-   ```
-   and press Enter.
-3. Log out or restart your computer to apply the changes.
+{{% steps %}}
+
+### Open Terminal
+
+Open **Terminal** (Finder: `Applications` → `Utilities`)
+
+### Run the command
+
+Enter the following command:
+```bash
+defaults write .GlobalPreferences com.apple.mouse.scaling -1
+```
+and press Enter
+
+### Restart your session
+
+Log out or restart your computer to apply the changes
+
+{{% /steps %}}
+
 
   {{< /tab >}}
   {{< tab >}}
 
 ### For GNOME (Ubuntu, Fedora, etc.):
-1. Open **Terminal**.
-2. Enter the following command to disable acceleration:
-   ```bash
-   gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
-   ```
-3. To verify, run:
-   ```bash
-   gsettings get org.gnome.desktop.peripherals.mouse accel-profile
-   ```
-   The output should show `flat`.
+{{% steps %}}
+
+### Open Terminal
+
+Open **Terminal**
+
+### Disable acceleration
+
+Enter the following command to disable acceleration:
+```bash
+gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
+```
+
+### Check the setting
+
+To verify, run:
+```bash
+gsettings get org.gnome.desktop.peripherals.mouse accel-profile
+```
+The output should show `flat`
+
+{{% /steps %}}
+
 
 ### For KDE Plasma:
 Open **System Settings** → **Input Devices** → **Mouse** and set **Acceleration profile** to **Flat**.
