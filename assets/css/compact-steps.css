@@ -1,0 +1,6 @@
+/* Opt-in page style: preserve step counters and layout */
+.content .hextra-steps h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}

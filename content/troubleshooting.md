@@ -1,5 +1,6 @@
 ---
 title: Решение частых проблем
+compact_steps: true
 ---
 
 {{< callout type="info" >}}
