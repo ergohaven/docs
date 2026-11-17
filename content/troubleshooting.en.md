@@ -100,6 +100,28 @@ Reflash the device using the settings reset firmware
 
 {{< /details >}}
 
+{{< details title="Dual boot — multiple operating systems on one computer" closed="true" >}}
+
+**One Bluetooth profile for all operating systems**
+
+1. Select the Bluetooth profile you want to use across all operating systems on the keyboard
+2. Pair the keyboard in one operating system, then in the other, using the same keyboard profile
+3. In the operating system where you paired the keyboard last, export its Bluetooth pairing keys and parameters using a utility for that operating system
+4. Boot into the other operating system and import the saved data using a compatible Bluetooth key transfer utility
+5. If the computer has more than two operating systems, repeat the import in each remaining system
+6. Check that the keyboard connects after switching operating systems without removing the device or pairing it again
+
+Choose a utility that supports your operating system version and Bluetooth Low Energy — BLE. Transfer the complete pairing data, including keys and identity parameters, rather than just the MAC address
+
+**A separate Bluetooth profile for each operating system**
+
+1. Boot into the first operating system, select an unused keyboard profile and pair the keyboard
+2. Boot into the second operating system, select another unused keyboard profile and pair the keyboard
+3. When switching operating systems, switch the keyboard to the corresponding profile
+4. If pairing in one operating system breaks the connection in the other, transfer the pairing keys using the steps above
+
+{{< /details >}}
+
 ## Software Issues
 
 {{< details title="Trackball: poor pointer accuracy, jerky cursor movement" closed="true" >}}
