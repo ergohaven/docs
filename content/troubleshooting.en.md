@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting
+compact_steps: true
 ---
 
 {{< callout type="info" >}}
