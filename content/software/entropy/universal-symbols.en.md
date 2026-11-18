@@ -97,10 +97,6 @@ Test **Universal Grave** and **Universal Tilde** — they should produce `` ` ``
 
 {{% /steps %}}
 
-### If the selected type is not applied to the keyboard
-
-Temporarily disconnect other external HID devices, including Bluetooth mice and USB receivers, and repeat the setup. The assistant may change another device's entry. Restart the keyboard after setup
-
 ## Layout Sync
 
 Layout Sync reports the current operating-system layout to firmware and automatically corrects its internal state after a system language switch
