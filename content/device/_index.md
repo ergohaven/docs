@@ -9,6 +9,7 @@ toc: false
   {{< card link="k04" title="Серия K:04" >}}
   {{< card link="phenom" title="Серия Phenom" >}}
   {{< card link="macropad" title="Macropad" >}}
+  {{< card link="sm62" title="Space Mission 62" >}}
   {{< card link="sm30" title="Space Mission 30" >}}
   {{< card link="tb-mini" title="Trackball Mini" >}}
   {{< card link="tb-royale" title="Trackball Royale" >}}
