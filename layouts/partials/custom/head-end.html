@@ -4,10 +4,8 @@
 {{- range where .AllTranslations "Language.Lang" "en" }}
   <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}" />
 {{- end }}
-{{- if .Params.compact_steps }}
-  {{- with resources.Get "css/compact-steps.css" | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
-  {{- end }}
+{{- with resources.Get "css/compact-steps.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
 {{- end }}
 <meta name="color-scheme" content="light dark" />
 <meta name="theme-color" content="#f6f4f2" media="(prefers-color-scheme: light)" />
