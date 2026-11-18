@@ -150,6 +150,10 @@ Install IBus, add an **Entropy Text Expander** input source, and select it befor
 4. Check `macOS` mode: off on Windows/Linux and on for macOS
 5. Repeat the test in English and Russian layouts
 
+### macOS: the selected keyboard type is not applied
+
+Temporarily disconnect other external HID devices, including Bluetooth mice and USB receivers, and repeat keyboard type setup through the macOS Keyboard Setup Assistant. The assistant may change another device's entry. Restart the keyboard after setup
+
 See [Universal Symbols](../universal-symbols) for details
 
 ## Collecting diagnostics
