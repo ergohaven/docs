@@ -7,6 +7,7 @@ sidebar:
 ---
 
 {{< cards cols="1" >}}
+  {{< card link="sm30" title="Space Mission 30" >}}
   {{< card link="k03" title="K:03" >}}
   {{< card link="k03-we" title="K:03 Wireless Edition" >}}
   {{< card link="hpd" title="High Plains Drifter" >}}

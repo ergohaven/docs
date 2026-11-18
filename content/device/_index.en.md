@@ -10,7 +10,6 @@ toc: false
   {{< card link="phenom" title="Phenom Series" >}}
   {{< card link="macropad" title="Macropad" >}}
   {{< card link="sm62" title="Space Mission 62" >}}
-  {{< card link="sm30" title="Space Mission 30" >}}
   {{< card link="tb-mini" title="Trackball Mini" >}}
   {{< card link="tb-royale" title="Trackball Royale" >}}
   {{< card link="sculpt" title="Sculpt" >}}
