@@ -21,11 +21,11 @@ Entropy is used for configuration and automatic operating-system layout synchron
 
 ## Available symbols
 
-The **Universal** picker tab contains 32 ASCII punctuation characters:
+The **Universal** picker tab contains 33 characters: 32 ASCII punctuation characters and the numero sign №:
 
 ```text
 . , ; : ! ? / ` ~ ' " ( ) [ ] { } < >
-- + * = # @ $ % ^ & | \ _
+- + * = # @ $ % ^ & | \ _ №
 ```
 
 {{< video autoplay="true" loop="true" muted="true" src="/video/entropy/universal-picker-en.mp4" >}}
@@ -72,6 +72,34 @@ The `macOS` action changes the mapping table in firmware: leave PC mode enabled 
 {{< video autoplay="true" loop="true" muted="true" src="/video/entropy/universal-controls-en.mp4" >}}
 
 Layout Indicator highlights the active key, while the system language indicator makes the result of `Toggle`, `EN`, and `RU` visible
+
+## Keyboard type in macOS
+
+{{% steps %}}
+
+### Set the keyboard type in macOS
+
+Use the macOS Keyboard Setup Assistant to assign **ANSI** or **ISO** to the intended keyboard
+
+### Select the same type in Entropy
+
+Open **Config → Live Features** and set **Keyboard type for Universal Symbols** to the same type — **ANSI** or **ISO**
+
+{{< layout-lightbox src="/images/entropy/universal-keyboard-type-en.jpg" alt="Selecting ANSI or ISO keyboard type in Entropy" width="900" >}}
+
+### Restart the keyboard
+
+Restart the keyboard after changing its type in macOS
+
+### Test the symbols
+
+Test **Universal Grave** and **Universal Tilde** — they should produce `` ` `` and `~`, respectively
+
+{{% /steps %}}
+
+### If the selected type is not applied to the keyboard
+
+Temporarily disconnect other external HID devices, including Bluetooth mice and USB receivers, and repeat the setup. The assistant may change another device's entry. Restart the keyboard after setup
 
 ## Layout Sync
 
