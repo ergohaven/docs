@@ -103,7 +103,6 @@ phenom_qmk:
       - "Отключите USB-C от левой половинки, зажмите кнопку <code>BOOT</code> на нижней стороне корпуса и подключите её по USB-C. Отпустите кнопку, когда появится диск <code>RPI-RP2</code>"
       - "Скопируйте скачанный UF2-файл на этот диск — половинка перезагрузится"
       - "Повторите действия для правой половинки с тем же UF2-файлом"
-    note: "При смене типа прошивки сохраните резервную копию раскладки, но не рассчитывайте на прямой перенос настроек между QMK и RMK"
   en:
     title: How to install QMK
     steps:
@@ -112,7 +111,6 @@ phenom_qmk:
       - "Disconnect USB-C from the left half, hold the <code>BOOT</code> button on the bottom of the case and connect it via USB-C. Release the button when the <code>RPI-RP2</code> drive appears"
       - "Copy the downloaded UF2 file to that drive — the half will restart"
       - "Repeat these steps for the right half with the same UF2 file"
-    note: "Back up your layout before changing firmware type, but do not assume settings can be transferred directly between QMK and RMK"
 
 phenom_rmk:
   ru:

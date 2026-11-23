@@ -48,31 +48,24 @@ for (const page of pages) {
   const choose = value => { const option = options.find(o => o.dataset.firmwareValue === value); assert.ok(option, value); option.listeners.click(); };
   for (const model of ['phenom', 'phenom-mini', 'phenom-micro']) {
     assert.equal(options.filter(o => o.dataset.firmwareValue === model).length, 1);
+    const option = options.find(o => o.dataset.firmwareValue === model);
+    assert.ok(!option.dataset.firmwareTypes, 'Phenom is QMK-only: no firmware-type selector');
     choose(model);
-    assert.equal(field.hidden, false);
-    assert.equal(type.value, '', 'No implicit selection, including after switching models');
-    assert.equal(result.hidden, true);
-    for (const firmware of ['QMK', 'RMK', 'QMK', '']) {
-      type.value = firmware;
-      type.listeners.change();
-      const visible = devices.filter(d => !d.hidden);
-      assert.equal(visible.length, firmware ? 1 : 0);
-      assert.equal(result.hidden, !firmware);
-      if (!firmware) continue;
-      const content = visible[0].textContent;
-      assert.match(content, /firmware-picker__instruction/);
-      assert.match(content, /<span>(?:Download|Скачать)<\/span>/);
-      if (firmware === 'RMK') {
-        assert.ok(content.includes(`${model}-v0.3.0.zip`));
-        assert.ok(content.includes(`${model.replaceAll('-', '_')}_left.uf2`));
-        assert.ok(content.includes(`${model.replaceAll('-', '_')}_right.uf2`));
-        assert.ok(!/double-press|дважды быстро/.test(content), 'Do not copy wireless K04 bootloader steps');
-      } else {
-        assert.ok(content.includes(`4.0.6_${model.replaceAll('-', '_')}_v1.uf2`));
-        assert.match(content, /same UF2|один и тот же UF2/);
-      }
-    }
-    type.value = 'RMK'; type.listeners.change();
+    assert.equal(field.hidden, true, 'Phenom must not expose QMK/RMK selection');
+    assert.equal(result.hidden, false, 'Show QMK download and instructions immediately');
+    const panels = devices.filter(d => d.dataset.firmwareDevice === model);
+    assert.equal(panels.length, 1, 'No hidden Phenom RMK panel may remain');
+    const visible = devices.filter(d => !d.hidden);
+    assert.equal(visible.length, 1);
+    assert.equal(visible[0], panels[0]);
+    const content = visible[0].textContent;
+    assert.match(content, /firmware-picker__instruction/);
+    assert.match(content, /<span>(?:Download|Скачать)<\/span>/);
+    assert.ok(content.includes(`4.0.6_${model.replaceAll('-', '_')}_v1.uf2`));
+    assert.match(content, /same UF2|один и тот же UF2/);
+    assert.ok(!content.includes('github.com/ergohaven/rmk/'), 'Phenom must not offer RMK downloads');
+    assert.ok(!content.includes('RMK'), 'Phenom QMK instructions must not retain obsolete migration notes');
+    assert.ok(!content.includes('_left.uf2') && !content.includes('_right.uf2'));
   }
   for (const option of options.filter(o => !o.dataset.firmwareTypes)) {
     choose(option.dataset.firmwareValue);
