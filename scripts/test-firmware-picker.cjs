@@ -64,6 +64,7 @@ for (const page of pages) {
     assert.ok(content.includes(`4.0.6_${model.replaceAll('-', '_')}_v1.uf2`));
     assert.match(content, /same UF2|один и тот же UF2/);
     assert.ok(!content.includes('github.com/ergohaven/rmk/'), 'Phenom must not offer RMK downloads');
+    assert.ok(!content.includes('RMK'), 'Phenom QMK instructions must not retain obsolete migration notes');
     assert.ok(!content.includes('_left.uf2') && !content.includes('_right.uf2'));
   }
   for (const option of options.filter(o => !o.dataset.firmwareTypes)) {
