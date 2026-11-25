@@ -75,6 +75,23 @@ for (const page of pages) {
     assert.equal(visible[0].dataset.firmwareDevice, option.dataset.firmwareValue);
     assert.match(visible[0].textContent, /firmware-picker__instruction/);
   }
+  choose('qmk-hpd-classic');
+  assert.equal(field.hidden, true, 'HPD Classic must have no firmware-type selection');
+  const classic = devices.filter(d => !d.hidden);
+  assert.equal(classic.length, 1);
+  const classicContent = classic[0].textContent;
+  assert.equal((classicContent.match(/class=["']?firmware-picker__download(?:["' >])/g) || []).length, 1);
+  assert.match(classicContent, /4\.0\.6_hpd_v2_enc_ball\.uf2/);
+  assert.match(classicContent, /<span>(?:Download|Скачать)<\/span>/);
+  assert.match(classicContent, /несъёмными модулями: энкодер слева, трекбол справа|fixed modules: encoder on the left, trackball on the right/);
+  choose('qmk-hpd-v2');
+  const hpd = devices.find(d => !d.hidden).textContent;
+  assert.equal((hpd.match(/class=["']?firmware-picker__download(?:["' >])/g) || []).length, 4, 'Preserve HPD v2 variants');
+  const stepsOf = text => text.match(/<ol[^>]*firmware-picker__instruction-steps[^>]*>([\s\S]*?)<\/ol>/)?.[1];
+  assert.ok(stepsOf(classicContent));
+  assert.equal(stepsOf(classicContent), stepsOf(hpd), 'Reuse HPD v2 flashing instructions');
+  search.value = 'HPD Classic'; search.listeners.input();
+  assert.ok(options.find(o => o.dataset.firmwareValue === 'qmk-hpd-classic' && !o.hidden), 'HPD Classic must be searchable');
   choose('qmk-sm62');
   assert.equal(field.hidden, true, 'SM62 is QMK-only');
   const sm62 = devices.find(d => !d.hidden);
