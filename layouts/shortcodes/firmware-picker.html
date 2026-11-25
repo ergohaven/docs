@@ -149,6 +149,9 @@
         <section class="firmware-picker__device" data-firmware-device="{{ .picker_id | default .id }}" data-firmware-variant="{{ .firmware_type | default "" }}" hidden>
           <p class="firmware-picker__group">{{ $groupName }}</p>
           <p class="firmware-picker__device-name">{{ $deviceName }}</p>
+          {{- with .description }}
+            <p class="firmware-picker__description">{{ index . $lang | default (index . "en") }}</p>
+          {{- end }}
           <div class="firmware-picker__downloads">
             {{- range .files }}
               {{- $managedReleaseURL := or (strings.HasPrefix .url "https://github.com/ergohaven/vial-qmk/releases/download/") (strings.HasPrefix .url "https://github.com/ergohaven/rmk/releases/download/") -}}
