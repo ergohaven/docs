@@ -167,7 +167,7 @@ groups:
             url: https://github.com/ergohaven/vial-qmk/releases/download/4.0.6/4.0.6_k03pro_v2_v3.uf2
       - id: qmk-hpd-classic
         name: HPD Classic
-        picker_order: 29.5
+        picker_order: 19.5
         instruction: qmk_split_new
         description:
           ru: 'Версия с несъёмными модулями: энкодер слева, трекбол справа'
