@@ -16,7 +16,7 @@ layout: landing
 - [x] K:04 Series tenting (Project "Angled")
 - [x] HPD Classic
 - [ ] Project "Ortho"
-- [ ] Space Mission 62
+- [x] Space Mission 62
 - [ ] Project "Customize"
 - [ ] Project "Sprawl"
 
